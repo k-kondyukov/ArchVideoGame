@@ -15,6 +15,6 @@ public class GameManagerMonoBeh : MonoBehaviour
 
     void OnDestroy()
     {
-        GameManager.Destroy();
+        GameManager.Clean();
     }
 }

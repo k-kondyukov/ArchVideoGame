@@ -6,5 +6,5 @@ abstract class Singleton<T> where T : class, new() {
 
     public static T Instance() => _instance ??= new T();
 
-    public static void Destroy() => _instance = null;
+    public static void Clean() => _instance = null;
 }
