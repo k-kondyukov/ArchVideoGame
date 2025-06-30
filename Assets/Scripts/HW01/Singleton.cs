@@ -1,6 +1,7 @@
 using UnityEngine;
 
-abstract class Singleton<T> {
+abstract class Singleton<T> where T : class, new() {
+
     private static T _instance = null;
 
     public static T Instance() => _instance ??= new T();
