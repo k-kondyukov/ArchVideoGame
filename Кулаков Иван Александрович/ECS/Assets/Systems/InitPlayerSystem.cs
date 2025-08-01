@@ -16,7 +16,7 @@ public sealed class InitPlayerSystem : IInitializeSystem
     var entity = _context.CreateEntity();
     entity.isPlayerTag = true;
     entity.AddPlayerId(0);
-    entity.AddPosition(new Vector2(0, -4));
-    entity.AddVelocity(new Vector2(5f, 0));
+    entity.AddPosition(new Vector2(0, 0));
+    entity.AddVelocity(new Vector2(0, 0));
   }
 }

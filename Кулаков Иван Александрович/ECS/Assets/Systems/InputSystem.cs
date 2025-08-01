@@ -4,26 +4,28 @@ using UnityEngine;
 
 public sealed class InputSystem : IExecuteSystem
 {
-  private readonly InputContext _input;
+  private readonly Contexts _contexts;
 
   public InputSystem(Contexts contexts)
   {
-    _input = contexts.input;
+    _contexts = contexts;
   }
 
   public void Execute()
   {
     float h = Input.GetAxisRaw("Horizontal");
-    var inputEntity = _input.inputEntity;
+    var inputContext = _contexts.input;
 
-    if (inputEntity == null)
+    // Если уже есть InputEntity — обновим значение
+    if (inputContext.hasInput)
     {
-      inputEntity = _input.SetInput(new Vector2(h, 0));
-      inputEntity.AddPlayerId(0);
+      inputContext.input.value = new Vector2(h, 0);
     }
     else
     {
-      inputEntity.ReplaceInput(new Vector2(h, 0));
+      var inputEntity = inputContext.SetInput(new Vector2(h, 0));
+      inputEntity.AddPlayerId(0); // Важно для привязки
     }
   }
 }
+

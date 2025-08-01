@@ -6,16 +6,17 @@ public sealed class PlayerMovementSystem : IExecuteSystem
 {
   private readonly IGroup<GameEntity> _players;
   private readonly InputContext _input;
+  private readonly float _moveSpeed;
 
-  public PlayerMovementSystem(Contexts contexts)
+  public PlayerMovementSystem(Contexts contexts, float moveSpeed)
   {
     _players = contexts.game.GetGroup(GameMatcher.AllOf(
         GameMatcher.PlayerTag,
-        GameMatcher.Position,
         GameMatcher.Velocity,
         GameMatcher.PlayerId
     ));
     _input = contexts.input;
+    _moveSpeed = moveSpeed;
   }
 
   public void Execute()
@@ -30,9 +31,9 @@ public sealed class PlayerMovementSystem : IExecuteSystem
     {
       if (e.playerId.value != playerId) continue;
 
-      Vector2 velocity = e.velocity.value;
-      Vector2 newPosition = e.position.value + input * velocity * Time.deltaTime;
-      e.ReplacePosition(newPosition);
+      // input (-1..1) * скорость
+      Vector2 velocity = input * _moveSpeed;
+      e.ReplaceVelocity(velocity);
     }
   }
 }

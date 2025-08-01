@@ -7,8 +7,8 @@ public sealed class CollisionDetectionSystem : IExecuteSystem
   private readonly IGroup<GameEntity> _players;
   private readonly IGroup<GameEntity> _asteroids;
 
-  private const float PlayerRadius = 0.5f;
-  private const float AsteroidRadius = 0.5f;
+  private const float PlayerRadius = 1.5f;
+  private const float AsteroidRadius = 0.8f;
 
   public CollisionDetectionSystem(Contexts contexts)
   {

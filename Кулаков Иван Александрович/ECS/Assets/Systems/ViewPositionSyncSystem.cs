@@ -4,18 +4,26 @@ using UnityEngine;
 
 public sealed class ViewPositionSyncSystem : IExecuteSystem
 {
-  private readonly IGroup<GameEntity> _viewGroup;
+  private readonly IGroup<GameEntity> _entities;
 
   public ViewPositionSyncSystem(Contexts contexts)
   {
-    _viewGroup = contexts.game.GetGroup(GameMatcher.AllOf(GameMatcher.Position, GameMatcher.View));
+    _entities = contexts.game.GetGroup(GameMatcher.AllOf(
+        GameMatcher.Position,
+        GameMatcher.View
+    ));
   }
 
   public void Execute()
   {
-    foreach (var e in _viewGroup)
+    foreach (var e in _entities)
     {
-      e.view.gameObject.transform.position = e.position.value;
+      var view = e.view.gameObject;
+
+      // ✅ Добавляем проверку на null/уничтожение
+      if (view == null || view.gameObject == null) continue;
+
+      view.transform.position = e.position.value;
     }
   }
 }

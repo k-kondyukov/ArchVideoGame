@@ -6,12 +6,13 @@ public sealed class AsteroidSpawnSystem : IExecuteSystem, IInitializeSystem
 {
   private readonly GameContext _gameContext;
   private float _timer;
-  private readonly float _spawnInterval = 1.5f; // интервал появления астероидов
+  private readonly float _spawnInterval; // интервал появления астероидов
   private readonly float _screenWidth = 10f; // нужно будет подставить по экрану
 
-  public AsteroidSpawnSystem(Contexts contexts)
+  public AsteroidSpawnSystem(Contexts contexts, float spawnInterval)
   {
     _gameContext = contexts.game;
+    _spawnInterval = spawnInterval;
   }
 
   public void Initialize()
@@ -34,7 +35,7 @@ public sealed class AsteroidSpawnSystem : IExecuteSystem, IInitializeSystem
     float x = Random.Range(-_screenWidth, _screenWidth);
     var asteroid = _gameContext.CreateEntity();
     asteroid.isAsteroidTag = true;
-    asteroid.AddPosition(new Vector2(x, 6f)); // 6 — верх экрана
+    asteroid.AddPosition(new Vector2(x, 10f));
     asteroid.AddVelocity(new Vector2(0f, -5f)); // падает вниз
   }
 }

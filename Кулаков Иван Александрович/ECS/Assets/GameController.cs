@@ -8,7 +8,12 @@ public class GameController : MonoBehaviour
 
   void Start()
   {
+    Time.timeScale = 1;
     var contexts = Contexts.sharedInstance;
+
+    // Очистка всех сущностей во всех контекстах
+    contexts.Reset();
+
     _systems = new GameFeatures(contexts);
     _systems.Initialize();
   }
