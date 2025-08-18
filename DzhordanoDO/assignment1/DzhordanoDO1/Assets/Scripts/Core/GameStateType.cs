@@ -1,0 +1,1 @@
+public enum GameStateType { MainMenu, GamePlay, Pause }
