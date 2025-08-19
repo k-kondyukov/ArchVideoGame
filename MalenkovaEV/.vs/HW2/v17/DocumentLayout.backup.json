@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nikit\\Downloads\\Telegram Desktop\\HW2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{40DDEA6E-A25F-55EC-4F66-208B39B1FF87}|Assembly-CSharp.csproj|c:\\users\\nikit\\downloads\\telegram desktop\\hw2\\assets\\scripts\\systems\\input\\commandmovesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40DDEA6E-A25F-55EC-4F66-208B39B1FF87}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\systems\\input\\commandmovesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40DDEA6E-A25F-55EC-4F66-208B39B1FF87}|Assembly-CSharp.csproj|c:\\users\\nikit\\downloads\\telegram desktop\\hw2\\assets\\scripts\\systems\\movement\\movesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40DDEA6E-A25F-55EC-4F66-208B39B1FF87}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\systems\\movement\\movesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40DDEA6E-A25F-55EC-4F66-208B39B1FF87}|Assembly-CSharp.csproj|C:\\Users\\nikit\\Downloads\\Telegram Desktop\\HW2\\assets\\scripts\\components\\components.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40DDEA6E-A25F-55EC-4F66-208B39B1FF87}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\components\\components.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CommandMoveSystem.cs",
+              "DocumentMoniker": "C:\\Users\\nikit\\Downloads\\Telegram Desktop\\HW2\\Assets\\Scripts\\Systems\\Input\\CommandMoveSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Systems\\Input\\CommandMoveSystem.cs",
+              "ToolTip": "C:\\Users\\nikit\\Downloads\\Telegram Desktop\\HW2\\Assets\\Scripts\\Systems\\Input\\CommandMoveSystem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Systems\\Input\\CommandMoveSystem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T01:56:32.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MoveSystem.cs",
+              "DocumentMoniker": "C:\\Users\\nikit\\Downloads\\Telegram Desktop\\HW2\\Assets\\Scripts\\Systems\\Movement\\MoveSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Systems\\Movement\\MoveSystem.cs",
+              "ToolTip": "C:\\Users\\nikit\\Downloads\\Telegram Desktop\\HW2\\Assets\\Scripts\\Systems\\Movement\\MoveSystem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Systems\\Movement\\MoveSystem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T01:52:34.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Components.cs",
+              "DocumentMoniker": "C:\\Users\\nikit\\Downloads\\Telegram Desktop\\HW2\\Assets\\Scripts\\Components\\Components.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Components\\Components.cs",
+              "ToolTip": "C:\\Users\\nikit\\Downloads\\Telegram Desktop\\HW2\\Assets\\Scripts\\Components\\Components.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Components\\Components.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T16:24:05.233Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
