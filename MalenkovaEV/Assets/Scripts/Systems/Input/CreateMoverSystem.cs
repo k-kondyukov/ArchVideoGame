@@ -1,0 +1,37 @@
+﻿using System.Collections.Generic;
+using Entitas;
+using UnityEngine;
+
+public class CreateMoverSystem : ReactiveSystem<InputEntity>
+{
+    readonly GameContext _gameContext;
+
+    public CreateMoverSystem(Contexts contexts) : base(contexts.input)
+    {
+        _gameContext = contexts.game;
+    }
+
+    protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context)
+    {
+        return context.CreateCollector(InputMatcher.AllOf(InputMatcher.UpArrow, InputMatcher.ArrowDown));
+    }
+
+    protected override bool Filter(InputEntity entity)
+    {
+        return entity.hasArrowDown;
+    }
+
+    protected override void Execute(List<InputEntity> entities)
+    {
+        Vector2 start = Vector2.zero;
+        Vector2 up = Vector2.up;
+
+        foreach (InputEntity e in entities)
+        {
+            GameEntity mover = _gameContext.CreateEntity();
+            mover.isMover = true;
+            mover.AddPosition(start);
+            mover.AddSprite("Tris");
+        }
+    }
+}
